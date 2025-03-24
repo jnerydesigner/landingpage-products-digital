@@ -70,7 +70,7 @@ export const PopularCard = () => {
             to="https://www.hostinger.com.br/cart?product=vps%3Avps_kvm_2&period=12&referral_type=cart_link&REFERRALCODE=9VCJANDERF92&referral_id=0195c82b-b927-70c0-8369-3b0e3cd2f916"
             target="blank"
           >
-            Select Plan
+            Selecione o Plano
           </Link>
         </Button>
       </div>
