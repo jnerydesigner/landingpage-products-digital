@@ -1,0 +1,69 @@
+import { Link } from "react-router";
+
+const CardsSection = () => {
+  const cards = [
+    {
+      id: 1,
+      title: "Servidor VPS",
+      description: "KVM 2",
+      img: "/hostinger-logo.svg",
+      linkAffiliate: "",
+      linkLearnMore: "/hostinger",
+    },
+    {
+      id: 2,
+      title: "Desenvolvimento Web",
+      description: "Criação de sites responsivos e performáticos.",
+      img: "/hostinger-logo.svg",
+      linkAffiliate: "",
+      linkLearnMore: "/hostinger",
+    },
+    {
+      id: 3,
+      title: "Automação de Processos",
+      description: "Automatize tarefas repetitivas e otimize seu tempo.",
+      img: "/hostinger-logo.svg",
+      linkAffiliate: "",
+      linkLearnMore: "/hostinger",
+    },
+    {
+      id: 4,
+      title: "Consultoria Técnica",
+      description: "Orientação especializada para seu projeto.",
+      img: "/hostinger-logo.svg",
+      linkAffiliate: "",
+      linkLearnMore: "/hostinger",
+    },
+  ];
+
+  return (
+    <div className="max-w-5xl mx-auto p-6">
+      <div className="flex flex-wrap justify-between gap-6">
+        {cards.map((card) => (
+          <div
+            key={card.id}
+            className="w-full sm:w-1/2 lg:w-1/4 bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all"
+          >
+            <div className="flex items-center space-x-2">
+              <div className="h-11 w-11 rounded-full flex items-center justify-center">
+                <img src={card.img} alt="logo hostinger" className="h-[100%]" />
+              </div>
+              <span className="font-semibold text-lg text-gray-800">
+                {card.title}
+              </span>
+            </div>
+            <p className="text-sm text-gray-600 mt-2">{card.description}</p>
+            <Link
+              to={card.linkLearnMore}
+              className="mt-4 inline-block text-green-600 hover:underline"
+            >
+              Saiba mais
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default CardsSection;
