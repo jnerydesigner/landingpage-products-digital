@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "landingpage-products-digital",
+            "script": "yarn",
+            "args": "preview"
+        }
+    ]
+}
