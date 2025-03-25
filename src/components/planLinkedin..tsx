@@ -2,8 +2,8 @@ export const PlanLinkedin = () => {
   return (
     <div className="max-w-6xl mx-auto p-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-h-[70vh] overflow-y-auto">
-        <div className="h-full bg-amber-50 p-4">
-          <img src="/linkedin.svg" alt="" />
+        <div className="h-full bg-white p-20 rounded-xl shadow-md border-2 border-gray-200 overflow-y-auto">
+          <img src="/linkedin.svg" alt="Logo do Linkedin" />
         </div>
 
         <div className="bg-white rounded-xl shadow-md p-6 border-2 border-gray-200 overflow-y-auto">
