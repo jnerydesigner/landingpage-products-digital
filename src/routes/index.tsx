@@ -1,6 +1,8 @@
 import { RootLayout } from "@/components/rootLayout";
 import Home from "@/pages/home";
 import Hostinger from "@/pages/hostinger";
+import Linkedin from "@/pages/linkedin";
+import Pix from "@/pages/pix";
 import { Route, Routes } from "react-router";
 
 export const RoutesApp = () => {
@@ -9,6 +11,8 @@ export const RoutesApp = () => {
       <Route path="/" element={<RootLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/hostinger" element={<Hostinger />} />
+        <Route path="/pix" element={<Pix />} />
+        <Route path="/linkedin" element={<Linkedin />} />
       </Route>
     </Routes>
   );

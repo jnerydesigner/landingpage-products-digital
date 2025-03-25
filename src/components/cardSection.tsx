@@ -12,19 +12,20 @@ const CardsSection = () => {
     },
     {
       id: 2,
-      title: "Desenvolvimento Web",
-      description: "Criação de sites responsivos e performáticos.",
-      img: "/hostinger-logo.svg",
+      title: "Quer Ajudar o Canal",
+      description: "Se você quiser ajudar o canal, clique em saiba mais.",
+      img: "/logo-jander-nery-dev-redondo.svg",
       linkAffiliate: "",
-      linkLearnMore: "/hostinger",
+      linkLearnMore: "/pix",
     },
     {
       id: 3,
-      title: "Automação de Processos",
-      description: "Automatize tarefas repetitivas e otimize seu tempo.",
-      img: "/hostinger-logo.svg",
+      title: "Conecte-se em nosso Linkedin",
+      description:
+        "Conectando-se poderemos aumentar a comunidade de programação",
+      img: "/linkedin.svg",
       linkAffiliate: "",
-      linkLearnMore: "/hostinger",
+      linkLearnMore: "/linkedin",
     },
     {
       id: 4,
