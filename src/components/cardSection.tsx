@@ -29,11 +29,12 @@ const CardsSection = () => {
     },
     {
       id: 4,
-      title: "Consultoria Técnica",
-      description: "Orientação especializada para seu projeto.",
-      img: "/hostinger-logo.svg",
+      title: "Mentoria",
+      description:
+        "Orientação especializada para seu projeto, posso tentar te ajudar.",
+      img: "/consult.svg",
       linkAffiliate: "",
-      linkLearnMore: "/hostinger",
+      linkLearnMore: "/consult",
     },
   ];
 
