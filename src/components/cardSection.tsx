@@ -39,7 +39,7 @@ const CardsSection = () => {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto p-6">
+    <div className="w-full px-[10px]">
       <div className="flex flex-wrap justify-between gap-6">
         {cards.map((card) => (
           <div

@@ -7,16 +7,16 @@ export const PopularCard = () => {
     <>
       <BreadCrumbApp name="Hostinger" page="/hostinger" />
       <div>
-        <div className="max-w-md w-full md:w-96 mx-1 h-[100%] bg-white rounded-xl shadow-md overflow-hidden relative border-2 border-blue-500">
+        <div className="w-full px-[10px] md:w-96 h-[100%] bg-white rounded-xl shadow-md overflow-hidden relative border-2 border-blue-500">
           {/* Cabeçalho */}
-          <div className="bg-blue-600 p-4">
+          <div className="bg-blue-600 p-4 mt-2 rounded-2xl mb-2">
             <div className="uppercase tracking-wide text-sm text-white font-semibold">
               MOST POPULAR
             </div>
           </div>
 
           {/* Corpo do card */}
-          <div className="p-6">
+          <div className="p-0">
             {/* Título */}
             <h2 className="text-2xl font-bold text-gray-800 mb-2">KVM 2</h2>
 
