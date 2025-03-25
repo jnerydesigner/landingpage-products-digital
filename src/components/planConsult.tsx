@@ -1,6 +1,9 @@
+import { BreadCrumbApp } from "./breadCrumbApp";
+
 export const PlanConsult = () => {
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+      <BreadCrumbApp name="Consultoria" page="/consult" />
       <h2 className="text-2xl font-bold text-gray-900 border-b-2 border-blue-500 pb-2">
         Mentoria para você deslanchar na sua conquista
       </h2>

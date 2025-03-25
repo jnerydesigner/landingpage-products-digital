@@ -1,10 +1,20 @@
+import { BreadCrumbApp } from "./breadCrumbApp";
+import { Button } from "./ui/button";
+
 export const PlanLinkedin = () => {
   return (
     <div className="max-w-6xl mx-auto p-4">
+      <BreadCrumbApp name="Linkedin" page="/linkedin" />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-h-[70vh] overflow-y-auto">
-        <div className="h-full bg-white p-20 rounded-xl shadow-md border-2 border-gray-200 overflow-y-auto">
-          <img src="/linkedin.svg" alt="Logo do Linkedin" />
-        </div>
+        <a href="https://www.linkedin.com/in/jander-nery/" target="blank">
+          <div className="h-full bg-white p-20 rounded-xl shadow-md border-2 border-gray-200 overflow-y-auto">
+            <img
+              src="/linkedin.svg"
+              alt="Logo do Linkedin"
+              className="transition duration-300 transform hover:scale-140"
+            />
+          </div>
+        </a>
 
         <div className="bg-white rounded-xl shadow-md p-6 border-2 border-gray-200 overflow-y-auto">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
@@ -44,6 +54,15 @@ export const PlanLinkedin = () => {
                 </li>
               </ul>
             </div>
+
+            <Button
+              className="w-full cursor-pointer h-12 bg-[#0077B5] hover:bg-[#005eb5] text-white font-bold py-3 px-4 rounded-lg transition duration-200 transform hover:scale-101"
+              asChild
+            >
+              <a href="https://www.linkedin.com/in/jander-nery/" target="blank">
+                Linkedin de Jander Nery
+              </a>
+            </Button>
           </div>
         </div>
       </div>
