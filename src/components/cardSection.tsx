@@ -13,7 +13,8 @@ const CardsSection = () => {
     {
       id: 2,
       title: "Quer Ajudar o Canal",
-      description: "Se você quiser ajudar o canal, clique em saiba mais.",
+      description:
+        "Se você quiser ajudar o canal, Saiba que esse Canal é nosso, clique em saiba mais.",
       img: "/logo-jander-nery-dev-redondo.svg",
       linkAffiliate: "",
       linkLearnMore: "/pix",
@@ -35,6 +36,22 @@ const CardsSection = () => {
       img: "/consult.svg",
       linkAffiliate: "",
       linkLearnMore: "/consult",
+    },
+    {
+      id: 5,
+      title: "Business Web Hosting",
+      description: "Hospedagem de Sites com mais potência e recursos",
+      img: "/hostinger-logo.svg",
+      linkAffiliate: "",
+      linkLearnMore: "/hostinger-site",
+    },
+    {
+      id: 6,
+      title: "Business Web Hosting",
+      description: "Hospedagem de Sites com mais potência e recursos",
+      img: "/hostinger-logo.svg",
+      linkAffiliate: "",
+      linkLearnMore: "/hostinger-site",
     },
   ];
 
