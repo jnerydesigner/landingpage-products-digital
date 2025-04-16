@@ -9,7 +9,7 @@ export const RootLayout = () => {
       <main className="w-full flex justify-center items-center p-6">
         <Outlet />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

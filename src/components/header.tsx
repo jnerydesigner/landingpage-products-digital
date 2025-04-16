@@ -12,7 +12,8 @@ export const Header = () => {
           />
         </Link>
       </div>
-      <h1 className="text-2xl font-bold text-gray-800">Se Liga Dev LTDA</h1>
+      <h1 className="text-2xl font-bold text-gray-800">Jander Nery Dev</h1>
+      <p className="text-2xl font-bold text-gray-800">Se Liga Dev LTDA</p>
     </header>
   );
 };

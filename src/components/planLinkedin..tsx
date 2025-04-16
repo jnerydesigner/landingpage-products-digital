@@ -5,7 +5,7 @@ export const PlanLinkedin = () => {
   return (
     <div className="max-w-6xl mx-auto p-4">
       <BreadCrumbApp name="Linkedin" page="/linkedin" />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-h-[70vh] overflow-y-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-h-[70vh] my-auto">
         <a href="https://www.linkedin.com/in/jander-nery/" target="blank">
           <div className="h-full bg-white p-20 rounded-xl shadow-md border-2 border-gray-200 overflow-y-auto">
             <img

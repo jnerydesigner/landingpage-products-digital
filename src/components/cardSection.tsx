@@ -39,15 +39,7 @@ const CardsSection = () => {
     },
     {
       id: 5,
-      title: "Business Web Hosting",
-      description: "Hospedagem de Sites com mais potência e recursos",
-      img: "/hostinger-logo.svg",
-      linkAffiliate: "",
-      linkLearnMore: "/hostinger-site",
-    },
-    {
-      id: 6,
-      title: "Business Web Hosting",
+      title: "Planos VPS Hostinger",
       description: "Hospedagem de Sites com mais potência e recursos",
       img: "/hostinger-logo.svg",
       linkAffiliate: "",

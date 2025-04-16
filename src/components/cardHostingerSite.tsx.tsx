@@ -1,0 +1,88 @@
+import { Link } from "react-router";
+import { Button } from "./ui/button";
+import { BreadCrumbApp } from "./breadCrumbApp";
+import { HostingerData } from "@/data/hostinger";
+
+export const CardHostingerSite = () => {
+  const dataHostinger = HostingerData;
+  return (
+    <>
+      <BreadCrumbApp name="Hostinger" page="/hostinger" />
+      <div>
+        {dataHostinger.map((hostinger) => (
+          <div
+            key={hostinger.id}
+            className="w-full px-[10px] md:w-96 h-[100%] bg-white rounded-xl shadow-md overflow-hidden relative border-2 border-blue-500"
+          >
+            <div className="bg-blue-600 p-4 mt-2 rounded-2xl mb-2">
+              <div className="uppercase tracking-wide text-sm text-white font-semibold flex justify-center items-center">
+                MOST POPULAR
+              </div>
+            </div>
+
+            <div className="p-0">
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">
+                {hostinger.title}
+              </h2>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-gray-500 line-through">US$ 17.99</span>
+                <span className="bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded">
+                  SAVE 61%
+                </span>
+              </div>
+
+              <p className="text-3xl font-bold text-gray-900 mb-2">
+                {hostinger.discountOneValue}
+              </p>
+              <p className="text-gray-600 mb-6">For 24-month term</p>
+
+              <div className="border-t border-gray-200 my-4"></div>
+
+              {/* Lista de benefícios */}
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✅</span>
+                  <span className="text-gray-700">2 vCPU cores</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✅</span>
+                  <span className="text-gray-700">8 GB RAM</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✅</span>
+                  <span className="text-gray-700">100 GB NVMe disk space</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✅</span>
+                  <span className="text-gray-700">8 TB bandwidth</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✅</span>
+                  <span className="text-gray-700">Data centers worldwide</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✅</span>
+                  <span className="text-gray-700">Linux operating systems</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="px-6 pb-6">
+              <Button
+                className="w-full cursor-pointer h-12 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-200 transform hover:scale-105"
+                asChild
+              >
+                <Link
+                  to="https://www.hostinger.com.br/cart?product=vps%3Avps_kvm_2&period=12&referral_type=cart_link&REFERRALCODE=9VCJANDERF92&referral_id=0195c82b-b927-70c0-8369-3b0e3cd2f916"
+                  target="blank"
+                >
+                  Selecione o Plano
+                </Link>
+              </Button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};

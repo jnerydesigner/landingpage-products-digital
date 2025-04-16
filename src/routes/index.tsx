@@ -2,6 +2,7 @@ import { RootLayout } from "@/components/rootLayout";
 import Consult from "@/pages/consult";
 import Home from "@/pages/home";
 import Hostinger from "@/pages/hostinger";
+import HostingerSite from "@/pages/hostinger-site";
 import Linkedin from "@/pages/linkedin";
 import Pix from "@/pages/pix";
 import { Route, Routes } from "react-router";
@@ -15,6 +16,7 @@ export const RoutesApp = () => {
         <Route path="/pix" element={<Pix />} />
         <Route path="/linkedin" element={<Linkedin />} />
         <Route path="/consult" element={<Consult />} />
+        <Route path="/hostinger-site" element={<HostingerSite />} />
       </Route>
     </Routes>
   );
