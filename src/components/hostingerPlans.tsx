@@ -18,6 +18,39 @@ export type Plan = {
 };
 
 export const HostingerPlans = () => {
+  const transformAndCalculateAnnualPlan = (value: string) => {
+    // Handle invalid inputs
+    if (!value || typeof value !== "string" || value.trim() === "") {
+      console.warn("Invalid or empty input:", value);
+      return "0";
+    }
+
+    // Remove all non-numeric characters except dot and comma
+    const cleanValue = value.replace(/[^\d,.]/g, "");
+    console.log("Clean value:", cleanValue); // Log for debugging
+
+    // Remove thousands separators (dots) and replace comma with dot for decimal
+    const formattedValue = cleanValue.replace(/\./g, "").replace(",", ".");
+    console.log("Formatted value:", formattedValue); // Log for debugging
+
+    // Convert to float
+    const valorFloat = parseFloat(formattedValue);
+
+    // Check if the result is a valid number
+    if (isNaN(valorFloat)) {
+      console.warn("Cannot parse value:", value, "Formatted:", formattedValue);
+      return "0";
+    }
+
+    // Divide by 24
+    const resultado = valorFloat / 24;
+
+    // Format result to string with 2 decimal places
+    const resultadoString = resultado.toFixed(2);
+
+    return resultadoString;
+  };
+
   return (
     <div className="w-[400px] md:w-full px-4 py-2 container mx-auto md:px-4 md:py-4 mt-40 md:mt-2">
       <BreadCrumbApp name="Planos Hostinger" page="/hostinger-site" />
@@ -35,7 +68,7 @@ export const HostingerPlans = () => {
                 {plan.title}
               </h3>
               <p className="text-2xl font-bold text-gray-800 mb-4">
-                {plan.price}/mês
+                {transformAndCalculateAnnualPlan(plan.price)}/mês (24 meses)
               </p>
               <ul className="text-sm text-gray-600 space-y-1 mb-4">
                 {plan.description.map((desc, idx) => (
