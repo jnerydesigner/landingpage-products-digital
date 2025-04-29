@@ -4,14 +4,6 @@ const CardsSection = () => {
   const cards = [
     {
       id: 1,
-      title: "Servidor VPS",
-      description: "KVM 2",
-      img: "/hostinger-logo.svg",
-      linkAffiliate: "",
-      linkLearnMore: "/hostinger",
-    },
-    {
-      id: 2,
       title: "Quer Ajudar o Canal",
       description:
         "Se você quiser ajudar o canal, Saiba que esse Canal é nosso, clique em saiba mais.",
@@ -20,7 +12,7 @@ const CardsSection = () => {
       linkLearnMore: "/pix",
     },
     {
-      id: 3,
+      id: 2,
       title: "Conecte-se em nosso Linkedin",
       description:
         "Conectando-se poderemos aumentar a comunidade de programação",
@@ -29,7 +21,7 @@ const CardsSection = () => {
       linkLearnMore: "/linkedin",
     },
     {
-      id: 4,
+      id: 3,
       title: "Mentoria",
       description:
         "Orientação especializada para seu projeto, posso tentar te ajudar.",
@@ -38,7 +30,7 @@ const CardsSection = () => {
       linkLearnMore: "/consult",
     },
     {
-      id: 5,
+      id: 4,
       title: "Planos VPS Hostinger",
       description: "Hospedagem de Sites com mais potência e recursos",
       img: "/hostinger-logo.svg",
@@ -48,12 +40,12 @@ const CardsSection = () => {
   ];
 
   return (
-    <div className="w-full px-[10px]">
-      <div className="flex flex-wrap justify-between gap-6">
+    <div className="w-full md:w-full px-[10px] md:mt-30px">
+      <div className="flex flex-wrap justify-center gap-6">
         {cards.map((card) => (
           <div
             key={card.id}
-            className="w-full sm:w-1/2 lg:w-1/4 bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all"
+            className="w-[300px] p-4 rounded-lg shadow-md hover:shadow-lg transition-all bg-white"
           >
             <div className="flex items-center space-x-2">
               <div className="h-11 w-11 rounded-full flex items-center justify-center">

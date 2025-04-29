@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 export const Header = () => {
   return (
-    <header className="flex flex-col justify-center items-center bg-jandernery shadow-md">
+    <header className="w-[400px] md:w-full flex flex-col justify-center items-center bg-jandernery shadow-md absolute top-0">
       <div className="h-[100px]">
         <Link to="/">
           <img
