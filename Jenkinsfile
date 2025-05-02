@@ -19,17 +19,27 @@ pipeline {
                 sh 'which pm2'
             }
         }
-        stage("Configurando Permissões"){
+        stage('Deploy com PM2') {
             steps {
                 script {
-                    sh 'sudo chown -R jenkins:jenkins /var/lib/jenkins/workspace/LandingPageLinks'
-                }
-            }
-        }
-        stage("Deploy Se Liga Dev"){
-            steps {
-                script {
-                    sh './deploy.sh'
+                    withCredentials([string(credentialsId: 'SSH_PASSWORD', variable: 'SSH_PASSWORD')]) {
+                        sh """
+                            sshpass -p '${SSH_PASSWORD}' ssh -o StrictHostKeyChecking=no deploy-server '
+                                export PATH=/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_22/bin:$PATH
+
+                                node -v
+                                yarn -v
+
+                                cd /var/lib/jenkins/workspace/LandingPageLinks
+
+                                yarn install
+                                yarn build
+
+                                pm2 update landing-page-links || true
+                                pm2 start ecosystem.config.cjs --update-env || pm2 restart ecosystem.config.cjs
+                            '
+                        """
+                    }
                 }
             }
         }

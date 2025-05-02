@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "landing-page-link-tree",
+      name: "landing-page-links",
       script: "./server.js",
       instances: 1,
       autorestart: true,
