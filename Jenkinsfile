@@ -24,7 +24,7 @@ pipeline {
                 script {
                     withCredentials([string(credentialsId: 'SSH_PASSWORD', variable: 'SSH_PASSWORD')]) {
                         sh """
-                            sshpass -p '${SSH_PASSWORD}' ssh -o StrictHostKeyChecking=no 191.101.78.119'
+                            sshpass -p '${SSH_PASSWORD}' ssh -o StrictHostKeyChecking=no deploy-server'
                                 export PATH=/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_22/bin:$PATH
 
                                 node -v
