@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: https://products-digital.seligadev.com.br/sitemap.xml
