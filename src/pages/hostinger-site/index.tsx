@@ -14,9 +14,7 @@ export default function HostingerSite() {
         <title>Adquira nossos planos com desconto</title>
         <link rel="canonical" href="/hostinger" />
       </Helmet>
-      <div className="w-[400px] md:w-full md:max-w-5xl flex justify-center items-center">
-        <PlanGrid />
-      </div>
+      <PlanGrid />
     </>
   );
 }

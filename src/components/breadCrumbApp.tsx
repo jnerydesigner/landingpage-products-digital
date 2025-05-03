@@ -18,7 +18,7 @@ export const BreadCrumbApp: React.FC<Props> = ({ name, page }) => {
   const location = useLocation();
 
   return (
-    <div className="w-full h-12 ml-3">
+    <div className="w-[300px] h-12 ml-3 flex justify-center items-center">
       {location.pathname === "/" ? (
         ""
       ) : (

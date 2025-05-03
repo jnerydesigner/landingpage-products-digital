@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export const PlanLinkedin = () => {
   return (
-    <div className="md:max-w-6xl p-4 gap-4 h-[1100px] md:h-auto md:bg-jandernery mt-30 md:flex md:justify-center md:items-center md:flex-col md:rounded-[8px]">
+    <div className="md:max-w-6xl p-4 gap-4 h-[1100px] md:h-auto md:flex md:justify-center md:items-center md:flex-col md:rounded-[8px]">
       <BreadCrumbApp name="Linkedin" page="/linkedin" />
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-2 max-h-[80vh] my-auto gap-4 mb-[50px] md:mb-4 md:mt-2.5 md:w-full">
         <a
@@ -11,7 +11,7 @@ export const PlanLinkedin = () => {
           target="blank"
           className="flex justify-center items-center"
         >
-          <div className="h-full md:w-[300px] bg-amber-100 p-20 rounded-xl shadow-md border-2 border-gray-200 overflow-y-auto flex justify-center items-center">
+          <div className="h-full md:w-[300px] bg-white p-20 rounded-xl shadow-md border-2 border-gray-200 overflow-y-auto flex justify-center items-center">
             <img
               src="/linkedin.svg"
               alt="Logo do Linkedin"

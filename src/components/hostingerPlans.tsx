@@ -52,11 +52,9 @@ export const HostingerPlans = () => {
   };
 
   return (
-    <div className="w-[400px] md:w-full px-4 py-2 container mx-auto md:px-4 md:py-4 mt-40 md:mt-2">
-      <BreadCrumbApp name="Planos Hostinger" page="/hostinger-site" />
-      <h2 className="text-3xl font-bold mb-8 text-center text-purple-700">
-        Planos VPS Hostinger
-      </h2>
+    <>
+      <BreadCrumbApp name="Planos Hostinger" page="/hostinger" />
+
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {HostingerData.map((plan) => (
           <div
@@ -99,6 +97,6 @@ export const HostingerPlans = () => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
