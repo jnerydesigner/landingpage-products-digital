@@ -1,3 +1,5 @@
+// routes/index.tsx
+import { Route, Routes } from "react-router";
 import { RootLayout } from "@/components/rootLayout";
 import Consult from "@/pages/consult";
 import Home from "@/pages/home";
@@ -5,7 +7,6 @@ import Hostinger from "@/pages/hostinger";
 import HostingerSite from "@/pages/hostinger-site";
 import Linkedin from "@/pages/linkedin";
 import Pix from "@/pages/pix";
-import { Route, Routes } from "react-router";
 
 export const RoutesApp = () => {
   return (
