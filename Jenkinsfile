@@ -68,7 +68,7 @@ pipeline {
                 <p><b>Tempo de Execução:</b> ${currentBuild.durationString}</p>
                 """,
                 subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!',
-                to: 'jander.webmaster@gmail.com',
+                to: '${EMAIL_RECIPIENT}',
                 mimeType: 'text/html'
                 )
             }
