@@ -53,7 +53,9 @@ pipeline {
                 <h2>Build Completa</h2>
                 """,
                 subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!',
-                to: 'jander.webmaster@gmail.com')
+                to: 'jander.webmaster@gmail.com',
+                 mimeType: 'text/html'
+                )
             }
         }
     }
