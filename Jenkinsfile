@@ -49,16 +49,16 @@ pipeline {
         stage('Send Mail Deploy Success') {
             steps {
                 script {
-                    def buildLogs = currentBuild.rawBuild.getLog(10).join("\n")
-                    
+                    // Se você não precisa dos logs, pode apenas pegar o status, tempo de execução, etc.
+                    def buildStatus = currentBuild.currentResult
+                    def buildDuration = currentBuild.durationString
+
                     emailext(
                         attachLog: true,
                         body: """
                         <h2>Build Completa</h2>
-                        <p><b>Status:</b> ${currentBuild.currentResult}</p>
-                        <p><b>Tempo de Execução:</b> ${currentBuild.durationString}</p>
-                        <p><b>Logs da Build:</b></p>
-                        <pre>${buildLogs}</pre>
+                        <p><b>Status:</b> ${buildStatus}</p>
+                        <p><b>Tempo de Execução:</b> ${buildDuration}</p>
                         """,
                         subject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!",
                         to: 'jander.webmaster@gmail.com',
