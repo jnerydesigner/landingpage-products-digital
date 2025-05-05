@@ -5,6 +5,7 @@ pipeline {
     }
      environment {
         EMAIL_RECIPIENT = 'jander.webmaster@gmail.com'  
+        COMMIT_HASH = "${env.GIT_COMMIT}"
     }
     stages {
         stage('Check Node Version') {
@@ -50,7 +51,7 @@ pipeline {
             steps {
                 emailext(attachLog: true,
                 body: """
-                <h2>Build Completa</h2>
+                <h2>Build Completa - commit: ${COMMIT_HASH}</h2>
                 <p><b>Status:</b> ${currentBuild.currentResult}</p>
                 <p><b>Tempo de Execução:</b> ${currentBuild.durationString}</p>
                 """,
