@@ -51,6 +51,7 @@ pipeline {
                 emailext(attachLog: true,
                 body: """
                 <h2>Build Completa</h2>
+                <p><b>Status:</b> ${currentBuild.currentResult}</p>
                 """,
                 subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!',
                 to: 'jander.webmaster@gmail.com',
