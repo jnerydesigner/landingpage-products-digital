@@ -59,7 +59,7 @@ export const HostingerPlans = () => {
         {HostingerData.map((plan) => (
           <div
             key={plan.id}
-            className="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between hover:shadow-purple-400 transition-shadow border border-purple-100"
+            className="bg-gray-50 rounded-2xl shadow-lg p-6 flex flex-col justify-between hover:shadow-purple-400 transition-shadow border border-purple-100"
           >
             <div>
               <h3 className="text-xl font-semibold text-purple-700 mb-2">

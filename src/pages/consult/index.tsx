@@ -14,7 +14,7 @@ export default function Consult() {
         <title>Querendo Contratar uma Mentoria</title>
         <link rel="canonical" href="/consult" />
       </Helmet>
-      <div className="max-w-5xl mx-auto p-6 flex justify-center items-center">
+      <div className="max-w-5xl mx-auto p-6 flex justify-center items-center ">
         <PlanConsult />
       </div>
     </>

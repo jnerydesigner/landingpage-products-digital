@@ -45,7 +45,7 @@ const CardsSection = () => {
         {cards.map((card) => (
           <div
             key={card.id}
-            className="w-[300px] p-4 rounded-lg shadow-md hover:shadow-lg transition-all bg-white"
+            className="w-[300px] p-4 rounded-lg shadow-md hover:shadow-lg transition-all bg-gray-50"
           >
             <div className="flex items-center space-x-2">
               <div className="h-11 w-11 rounded-full flex items-center justify-center">
