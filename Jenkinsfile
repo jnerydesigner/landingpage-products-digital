@@ -48,19 +48,23 @@ pipeline {
         }
         stage('Send Mail Deploy Success') {
             steps {
-                def buildLogs = currentBuild.rawBuild.getLog(10).join("\n")
-                emailext(attachLog: true,
-                body: """
-                <h2>Build Completa</h2>
-                <p><b>Status:</b> ${currentBuild.currentResult}</p>
-                <p><b>Tempo de Execução:</b> ${currentBuild.durationString}</p>
-                <p><b>Logs da Build:</b></p>
-                <pre>${buildLogs}</pre>
-                """,
-                subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!',
-                to: 'jander.webmaster@gmail.com',
-                 mimeType: 'text/html'
-                )
+                script {
+                    def buildLogs = currentBuild.rawBuild.getLog(10).join("\n")
+                    
+                    emailext(
+                        attachLog: true,
+                        body: """
+                        <h2>Build Completa</h2>
+                        <p><b>Status:</b> ${currentBuild.currentResult}</p>
+                        <p><b>Tempo de Execução:</b> ${currentBuild.durationString}</p>
+                        <p><b>Logs da Build:</b></p>
+                        <pre>${buildLogs}</pre>
+                        """,
+                        subject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!",
+                        to: 'jander.webmaster@gmail.com',
+                        mimeType: 'text/html'
+                    )
+                }
             }
         }
     }
