@@ -6,8 +6,20 @@ pipeline {
      environment {
         EMAIL_RECIPIENT = 'jander.webmaster@gmail.com'  
         COMMIT_HASH = "${env.GIT_COMMIT}"
+        COMMIT_MESSAGE = ''
     }
     stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    // Faz o checkout do código do repositório Git
+                    checkout scm
+                    
+                    // Obtém a mensagem do commit
+                    COMMIT_MESSAGE = sh(script: "git log -1 --pretty=%B", returnStdout: true).trim()
+                }
+            }
+        }
         stage('Check Node Version') {
             steps {
                 script {
@@ -51,7 +63,7 @@ pipeline {
             steps {
                 emailext(attachLog: true,
                 body: """
-                <h2>Build Completa - commit: ${COMMIT_HASH}</h2>
+                <h2>Build Completa - commit: ${COMMIT_MESSAGE} - ${COMMIT_HASH}</h2>
                 <p><b>Status:</b> ${currentBuild.currentResult}</p>
                 <p><b>Tempo de Execução:</b> ${currentBuild.durationString}</p>
                 """,
