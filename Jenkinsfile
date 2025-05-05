@@ -52,7 +52,7 @@ pipeline {
                 body: """
                 <h2>Build Completa</h2>
                 """,
-                subject: '${PROJECT_NAME} - Build # ${BUILD_NUMBER} - ${BUILD_STATUS!}',
+                subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!',
                 to: 'jander.webmaster@gmail.com')
             }
         }
