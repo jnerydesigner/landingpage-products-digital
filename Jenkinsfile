@@ -3,6 +3,9 @@ pipeline {
     tools {
         nodejs 'NodeJS_22'
     }
+     environment {
+        EMAIL_RECIPIENT = 'jander.webmaster@gmail.com'  
+    }
     stages {
         stage('Check Node Version') {
             steps {
@@ -42,6 +45,22 @@ pipeline {
                     }
                 }
             }
+        }
+    }
+    post {
+        always {
+            emailext (
+                subject: "Resultado da Build: ${currentBuild.fullDisplayName}",
+                body: """
+                <h2>Build Completa</h2>
+                <p><b>Status:</b> ${currentBuild.currentResult}</p>
+                <p><b>Tempo de Execução:</b> ${currentBuild.durationString}</p>
+                <p><b>Logs da Build:</b></p>
+                <pre>${currentBuild.getLog(10).join("\n")}</pre>
+                """,
+                to: "${EMAIL_RECIPIENT}",
+                mimeType: 'text/html'
+            )
         }
     }
 }
