@@ -51,12 +51,8 @@ pipeline {
                 emailext(attachLog: true,
                 body: """
                 <h2>Build Completa</h2>
-                <p><b>Status:</b> ${currentBuild.currentResult}</p>
-                <p><b>Tempo de Execução:</b> ${currentBuild.durationString}</p>
-                <p><b>Logs da Build:</b></p>
-                <pre>${currentBuild.getLog(10).join("\n")}</pre>
                 """,
-                subject: 'Email com text subject',
+                subject: '${PROJECT_NAME} - Build # ${BUILD_NUMBER} - ${BUILD_STATUS!}',
                 to: 'jander.webmaster@gmail.com')
             }
         }
