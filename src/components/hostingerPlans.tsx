@@ -54,6 +54,9 @@ export const HostingerPlans = () => {
   return (
     <>
       <BreadCrumbApp name="Planos Hostinger" page="/hostinger" />
+      <h1 className="mb-10 font-bold text-2xl">
+        💡 Adquira os planos da Hostinger e ajude o Canal a Crescer 🚀
+      </h1>
 
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {HostingerData.map((plan) => (

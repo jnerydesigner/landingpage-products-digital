@@ -8,11 +8,15 @@ export const Header = () => {
           <img
             src="/logo-jander-nery-dev-redondo.svg"
             alt="logo jander nery dev"
+            title="Logo Jander Nery Dev"
             className="h-full"
+            width="500px"
+            height="500px"
+            loading="eager"
           />
         </Link>
       </div>
-      <h1 className="text-2xl font-bold text-gray-800">Jander Nery Dev</h1>
+      <span className="text-2xl font-bold text-gray-800">Jander Nery Dev</span>
       <p className="text-2xl font-bold text-gray-800">Se Liga Dev LTDA</p>
     </header>
   );

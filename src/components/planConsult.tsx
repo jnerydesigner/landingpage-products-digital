@@ -4,11 +4,11 @@ export const PlanConsult = () => {
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg">
       <BreadCrumbApp name="Consultoria" page="/consult" />
-      <h2 className="text-2xl font-bold text-gray-900 border-b-2 border-blue-500 pb-2">
-        Mentoria para você deslanchar na sua conquista
-      </h2>
+      <h1 className="text-2xl font-bold text-gray-900 border-b-2 border-blue-500 pb-2">
+        Mentoria para você deslanchar nas suas conquistas
+      </h1>
 
-      <h3 className="text-xl font-semibold text-blue-600 mt-4">Tecnologias</h3>
+      <h2 className="text-xl font-semibold text-blue-600 mt-4">Tecnologias</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
         {[
           {
@@ -28,13 +28,13 @@ export const PlanConsult = () => {
             key={tech.id}
             className="p-4 border-l-4 border-blue-500 bg-gray-100 rounded-md"
           >
-            <h4 className="font-semibold text-gray-900">{tech.title}</h4>
+            <h3 className="font-semibold text-gray-900">{tech.title}</h3>
             <p className="text-gray-700">{tech.desc}</p>
           </div>
         ))}
       </div>
 
-      <h3 className="text-xl font-semibold text-blue-600 mt-6">Serviços</h3>
+      <h4 className="text-xl font-semibold text-blue-600 mt-6">Serviços</h4>
       <ul className="mt-2 list-disc list-inside text-gray-800">
         <li>Code Review</li>
         <li>Arquitetura de Software</li>
@@ -50,7 +50,11 @@ export const PlanConsult = () => {
         <img
           src="/qrcode_whatsapp.svg"
           alt="WhatsApp de Jander Nery"
+          title="WhatsApp de Jander Nery"
           className="h-full"
+          width="310px"
+          height="310px"
+          loading="eager"
         />
       </div>
     </div>
