@@ -51,8 +51,8 @@ pipeline {
                                 yarn install
                                 yarn build
 
-                                
-                                pm2 start "yarn preview" --name landing-page-links || pm2 restart "yarn preview" --name landing-page-links
+                                pm2 update landing-page-links || true
+                                pm2 start ecosystem.config.cjs --update-env || pm2 restart ecosystem.config.cjs
                             '
                         """
                     }
@@ -76,7 +76,7 @@ pipeline {
     }
     
 }
-// pm2 update landing-page-links || true
+
 
 //  post {
 //         always {
