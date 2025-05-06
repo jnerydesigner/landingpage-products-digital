@@ -2,7 +2,8 @@ module.exports = {
   apps: [
     {
       name: "landing-page-links",
-      script: "./server.js",
+      script: "yarn",
+      args: "preview --port 8090",
       instances: 1,
       autorestart: true,
       wait_ready: true,
