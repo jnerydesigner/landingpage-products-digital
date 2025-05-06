@@ -51,7 +51,7 @@ pipeline {
                                 yarn install
                                 yarn build
 
-                                pm2 update landing-page-links || true
+                                
                                 pm2 start "yarn preview" --name landing-page-links || pm2 restart "yarn preview" --name landing-page-links
                             '
                         """
@@ -76,7 +76,7 @@ pipeline {
     }
     
 }
-
+// pm2 update landing-page-links || true
 
 //  post {
 //         always {
